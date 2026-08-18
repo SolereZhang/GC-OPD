@@ -1,0 +1,53 @@
+method: gc_opd
+
+main_table:
+  shared:
+    student_scales: [4B, 8B]
+    train_batch_size: 32
+    rollout_n: 8
+    max_prompt_length: 32768
+    max_response_length: 10240
+    total_training_steps: 100
+    enable_thinking: false
+    seed: 42
+  gc_opd:
+    policy_method: gc_opd
+    teacher_score_agg: mean
+    residual_norm: group_zscore
+    credit_mode: raca
+    residual_beta: 0.10
+    credit_cap: 5.0
+    group_size: 8
+    min_group_std: 1.0e-6
+    min_token_std: 1.0e-6
+    advantage_clip: 10.0
+  opd:
+    policy_method: gc_opd
+    teacher_score_agg: mean
+    residual_norm: group_zscore
+    credit_mode: raca
+    residual_beta: 0.0
+    credit_cap: 5.0
+    group_size: 8
+    min_group_std: 1.0e-6
+    min_token_std: 1.0e-6
+    advantage_clip:
+      4B: 0.0
+      8B: 10.0
+
+ablations:
+  uniform:
+    credit_mode: uniform
+    residual_beta: 0.10
+  teacher_abs:
+    credit_mode: teacher_abs
+    residual_beta: 0.10
+  relative_opd_leverage:
+    credit_mode: relative_opd_leverage
+    residual_beta: 0.10
+  relative_teacher_support:
+    credit_mode: relative_teacher_support
+    residual_beta: 0.10
+  negative_raca:
+    credit_mode: raca
+    residual_beta: -0.10

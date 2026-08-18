@@ -1,0 +1,14 @@
+# Versions recorded from the environment used for the reported evaluations.
+torch==2.9.1
+vllm==0.11.2
+transformers==4.57.1
+evalscope==1.8.1
+openai==2.6.1
+httpx==0.27.2
+datasets==3.6.0
+tqdm==4.67.1
+colorlog==6.10.1
+oss2==2.19.1
+sortedcontainers==2.4.0
+modelscope==1.34.0
+markdown==3.10.2

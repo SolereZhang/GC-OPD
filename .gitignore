@@ -1,0 +1,71 @@
+# Local monitor and analysis artifacts
+/analysis/
+
+# Training/runtime outputs
+/checkpoints/
+/checkpoint/
+/global_step_*/
+/logs/
+/log/
+/outputs/
+/runs/
+/tensorboard/
+/tb_logs/
+/wandb/
+/ray_results/
+/mlruns/
+**/checkpoints/
+**/global_step_*/
+**/logs/
+**/log/
+**/outputs/
+**/runs/
+**/tensorboard/
+**/tb_logs/
+**/wandb/
+**/ray_results/
+**/mlruns/
+
+# Large model/data artifacts generated or downloaded locally
+*.bin
+*.ckpt
+*.parquet
+*.pt
+*.safetensors
+*.tar.gz
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+.coverage
+.coverage.*
+.hypothesis/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+.Python
+.venv/
+ENV/
+env/
+venv/
+
+# Build/package outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
