@@ -6,6 +6,7 @@ Chaojun Xiao<sup>&dagger;</sup>, and Yuezhi Zhou<sup>&dagger;</sup></strong>
 
 <sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding authors.
 
+[![arXiv](https://img.shields.io/badge/arXiv-2608.19181-b31b1b.svg)](https://arxiv.org/abs/2608.19181)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg)](requirements.txt)
 
